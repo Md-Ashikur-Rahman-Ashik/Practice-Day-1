@@ -30,6 +30,25 @@ int main()
         {
             cout << 0 << endl;
         }
+        else
+        {
+            int i = 0, countFirstOperation = 0;
+
+            while (integerArray[i] % 2 != maximumElement % 2)
+            {
+                i++;
+                countFirstOperation++;
+            }
+
+            int j = arraySize - 1, countSecondOperation = 0;
+            while (integerArray[j] % 2 != minimumElement % 2)
+            {
+                j--;
+                countSecondOperation++;
+            }
+
+            cout << min(countFirstOperation, countSecondOperation) << endl;
+        }
     }
 
     return 0;
